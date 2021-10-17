@@ -4,8 +4,8 @@ import 'package:pets_website/constants/constants.dart';
 import 'package:pets_website/screens/home/components/search_bar.dart';
 import 'package:pets_website/screens/home/components/web_menu.dart';
 
-import 'browser_button.dart';
-import 'icon_card.dart';
+import '../browser_button.dart';
+import '../icon_card.dart';
 
 class WebHeader extends StatelessWidget {
   const WebHeader({
@@ -75,25 +75,7 @@ class WebHeader extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    child: Row(
-                      children: [
-                        Container(
-                          child: Icon(Icons.delivery_dining),
-                          decoration: BoxDecoration(
-                              color: kPrimaryColor.withOpacity(.5),
-                              shape: BoxShape.circle),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          'free shipping \nFrom CHF 50',
-                          style: TextStyle(height: 1.5),
-                        ),
-                      ],
-                    ),
-                  ),
+
                 ],
               ),
             )
