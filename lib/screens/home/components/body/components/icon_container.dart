@@ -54,11 +54,11 @@ class IconContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 3,vertical: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 2,vertical: kDefaultPadding),
       child: InkWell(
         onTap: press,
         child: Container(
-          child: Column(
+          child: Wrap(
             children: [
               Container(
                 padding: EdgeInsets.all(8.0),
@@ -67,7 +67,7 @@ class IconContainer extends StatelessWidget {
                     BoxDecoration(color: kPrimaryColor, shape: BoxShape.circle),
               ),
               SizedBox(
-                height: 10,
+                width: 10,
               ),
               Text(
                 title,

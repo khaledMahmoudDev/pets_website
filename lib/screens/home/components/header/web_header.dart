@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:pets_website/constants/constants.dart';
+import 'package:pets_website/model/responsive.dart';
 import 'package:pets_website/screens/home/components/search_bar.dart';
 import 'package:pets_website/screens/home/components/web_menu.dart';
 
@@ -43,38 +43,34 @@ class WebHeader extends StatelessWidget {
                   ),
                   searchBar(),
                   SizedBox(
-                    height: 20,
+                    height: 50,
                   ),
-                  Row(
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            'High quality \nproducts for \nyour pets',
-                            style: TextStyle(
-                                height: 1.5,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          BrowserButton(),
-                        ],
-                      ),
-                      Spacer(),
-                      Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/dog banner.png',
-                            height: 260,
-                            width: 260,
-                            fit: BoxFit.cover,
-                          ),
-                        ],
-                      ),
-                    ],
+                  ResponsiveWidget(
+                    mobile: Column(
+                      children: [
+                        Text(
+                          'High quality \nproducts for \nyour pets',
+                          style: TextStyle(
+                              height: 1.5,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Image.asset(
+                          'assets/images/dog banner.png',
+                          height: 260,
+                          width: 260,
+                          fit: BoxFit.cover,
+                        ),
+                        SizedBox(height: 20,),
+                        BrowserButton()
+                      ],
+                    ),
+                    desktop:Container(),
                   ),
+
 
                 ],
               ),
